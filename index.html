@@ -44,30 +44,36 @@
 
     <!-- Navbar: menu fixo no topo, responsivo -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-        <div class="container">
-            <!-- Marca / título -->
-            <a class="navbar-brand fw-bold fs-4" href="#">Sabor Da Casa</a>
-            <!-- Botão toggle para mobile/tablet -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Links de navegação -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Cardapios">Cardápio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Whats">Contato</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <div class="container">
+    <!-- Marca / título / logo juntos -->
+    <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#">
+      <img src="./img/file.png" alt="Logo" width="40" height="40" class="me-2">
+      Sabor Da Casa
+    </a>
+
+    <!-- Botão toggle para mobile/tablet -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links de navegação -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Cardapios">Cardápio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Whats">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
     <!-- Carousel: slider principal destacando produtos -->
     <div id="carousel" class="carousel slide mb-5" data-bs-ride="carousel">
@@ -155,13 +161,14 @@
     <!-- Footer com contato -->
     <footer>
         <h2>Nosso Contato</h2>
-        <a href="https://wa.me/5548998089729" target="_blank">
-            <img src="./img/whatsapp.jpg" id="Whats" alt="WhatsApp" style="width:40px;height:40px;"> 48 99808-9729
-        </a>
+        <button type="button" class="btn btn-outline-warning btn-lg mb-3" id="Whats">
+        <a href="https://wa.me/5548998089729" id="Whats" target="_blank">
+            <img src="./img/whatsapp.jpg" alt="WhatsApp" style="width:40px;height:40px;"> Entre em contato com a gente!
+        </a> 
+         <img src="./img/file.png" alt="Logo" width="40" height="40" class="me-2">
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
