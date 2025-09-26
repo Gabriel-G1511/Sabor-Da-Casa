@@ -1,0 +1,58 @@
+        /* Cores principais */
+        :root {
+            --primary-color: #ee9b35;
+            --secondary-color: #0e141a;
+            --highlight-color: #FFD700;
+        }
+
+        /* Corpo e fontes */
+        body {
+            background-color: var(--primary-color);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Marca com fonte cursiva */
+        h5 {
+            font-family: 'Pacifico', cursive;
+            color: var(--primary-color);
+        }
+
+        /* Carousel */
+        .carousel-caption {
+            color: var(--highlight-color);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 1rem;
+            border-radius: 0.3rem;
+        }
+
+        /* Cards como botões escuros */
+    .card.btn-dark {
+        background-color: #212529; /* fundo escuro */
+        border: none; /* remove borda padrão */
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card.btn-dark:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--primary-color);
+        }
