@@ -1,58 +1,155 @@
-        /* Cores principais */
-        :root {
-            --primary-color: #ee9b35;
-            --secondary-color: #0e141a;
-            --highlight-color: #FFD700;
-        }
+/* Cores principais */
+:root {
+    --primary-color: #ee9b35;
+    --secondary-color: #0e141a;
+    --highlight-color: #FFD700;
+}
 
-        /* Corpo e fontes */
-        body {
-            background-color: var(--primary-color);
-            font-family: 'Roboto', sans-serif;
-        }
+/* Corpo e fontes */
+body {
+    background-color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+}
 
-        /* Marca com fonte cursiva */
-        h5 {
-            font-family: 'Pacifico', cursive;
-            color: var(--primary-color);
-        }
+/* Marca com fonte cursiva */
+h5 {
+    font-family: 'Pacifico', cursive;
+    color: var(--primary-color);
+}
 
-        /* Carousel */
-        .carousel-caption {
-            color: var(--highlight-color);
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 0.5rem 1rem;
-            border-radius: 0.3rem;
-        }
+/* Carousel - indicadores embaixo */
+.carousel-indicators button {
+    background-color: var(--primary-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--highlight-color);
+    margin: 0 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-        /* Cards como botões escuros */
-    .card.btn-dark {
-        background-color: #212529; /* fundo escuro */
-        border: none; /* remove borda padrão */
-        cursor: pointer;
-        transition: transform 0.2s, box-shadow 0.2s;
+.carousel-indicators .active {
+    background-color: var(--highlight-color);
+    transform: scale(1.2);
+}
+
+/* Ajusta posição dos indicadores */
+.carousel-indicators {
+    bottom: 10px; /* distância do fundo */
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* fundo preto semi-transparente */
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+.carousel-caption h5 {
+    color: var(--highlight-color) !important; /* título da legenda */
+        text-shadow: 20px 20px 40px rgba(0, 0, 0, 0);
+}
+
+.carousel-caption p {
+    color: var(--highlight-color) !important; /* texto da legenda */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Cards */
+.card.btn-dark {
+    background-color: #212529;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card.btn-dark:hover {  
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Sobre nós */
+.sobre-nos {
+    background: url('./img/fundo.png') no-repeat center center/cover;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 60px 40px;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 20px 20px 80px rgb(0, 0, 0);
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+/* Navbar links desktop */
+@media screen and (min-width: 991px) {
+    .nav-item .nav-link-outline {
+        color: #fff;
+        border: 2px solid var(--primary-color);
+        border-radius: 5px;
+        padding: 5px 10px;
+        transition: background-color 0.3s, color 0.3s;
+        text-decoration: none;
     }
 
-    .card.btn-dark:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    .nav-item .nav-link-outline:hover {
+        background-color: var(--highlight-color);
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+/* Navbar mobile/tablet */
+@media screen and (max-width: 990px) {
+    .navbar-nav.ms-auto {
+        flex-direction: column;
+        background-color: var(--secondary-color);
     }
 
+    .nav-item .nav-link-outline {
+        color: #fff;
+        background-color: var(--secondary-color);
+        border: 2px solid var(--primary-color);
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin: 5px 0;
+        text-decoration: none;
+        outline: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+        display: inline-block;
+        transition: background-color 0.3s, color 0.3s;
+    }
 
-        /* Footer */
-        footer {
-            background-color: var(--secondary-color);
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: var(--primary-color);
-        }
+    .nav-item .nav-link-outline:hover,
+    .nav-item .nav-link-outline:focus,
+    .nav-item .nav-link-outline:active {
+        background-color: var(--highlight-color);
+        color: #fff;
+        outline: none !important;
+        text-decoration: none !important;
+    }
+}
