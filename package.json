@@ -1,0 +1,13 @@
+{
+  "name": "sabor-da-casa",
+  "version": "1.0.0",
+  "description": "Descrição do Trabalho: Este projeto tem como objetivo demonstrar a aplicação prática do framework Bootstrap para criação de interfaces web responsivas e modernas. A página desenvolvida integra os principais componentes do Bootstrap, incluindo carousel de imagens, grid responsivo e cards interativos, garantindo adaptação automática a diferentes tamanhos de tela (desktop, tablet e smartphone).",
+  "main": "index.js",
+  "scripts": {
+    "less": "lessc src/main.less build/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
