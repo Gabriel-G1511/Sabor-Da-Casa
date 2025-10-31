@@ -8,16 +8,26 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-#imagem-carousel {
-    display: block;
-    max-width: 50vh;
-}
-
 /* Marca com fonte cursiva */
 h5 {
     font-family: 'Pacifico', cursive;
     color: @corPrimaria;
 }
+
+#carousel-container {
+    max-width: 1200px;   // limite máximo
+    margin: 0 auto;       // centraliza
+    position: relative;   // necessário pro carousel
+}
+
+#carousel-container .carousel-item img {
+    width: 100%;          // se quiser responsivo
+    max-width: 1200px;    // nunca passa disso
+    height: auto;
+    margin: 0 auto;
+}
+
+
 
 /* Carousel - indicadores embaixo */
 .carousel-indicators button {
